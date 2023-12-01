@@ -1,0 +1,327 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family:poppins;
+}
+
+.navbar{
+    display:flex;
+    align-items: center;
+    top:0;
+    left:0;
+    padding:20px;
+    padding-left:10px;
+    padding-right: 30px;
+    padding-top: 50px;
+    text-decoration: none;
+}
+.navigation a{
+    text-decoration: none;
+}
+
+header{
+    display:flex;
+    position: fixed;
+    width: 100%;
+   top: 0;
+   left: -10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    text-decoration: none;
+    color:white;
+    padding:20px 0;
+    
+}
+header h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-weight:450;
+    font-size: 35px;
+    color:#e6e2d3;
+    padding:10px 0;
+    }
+
+    header h2 img{
+        border-radius: 70%;
+        }
+    
+header nav.navigation a{
+    position: relative;
+    color:white;
+    margin-right: 20px;
+    font-weight:500;
+    font-size:20px;
+    padding:10px 0;
+    margin-left: 30px;
+   
+}
+header nav.navigation a::after{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    width:110%;
+    height:2px;
+    background:#fff;
+    border-radius:5px; 
+    transform-origin: right;
+    transform:scaleX(0); 
+    transition:transform .5s;
+}
+
+header nav.navigation a:hover::after{
+    transform-origin: left;
+    transform:scaleX(1); 
+}
+header div.sign-in-up button{
+    position:relative;
+    background: transparent;
+    font-size:16px;
+    
+    font-weight:400;
+    padding: 4px 12px;
+    color:white;
+    border:2px solid #fff;
+    border-radius: 5px;
+    outline:none;
+    margin-left: 40px;
+    transition:transform .5s;
+}
+
+header div.sign-in-up button:hover{
+    background:#fff;
+    color: #162938;
+
+}
+
+body{
+    display:flex;
+    margin:0;
+    overflow-x: hidden;
+    
+    background: url('../Images/text.jpg')  no-repeat;
+   
+    
+    background-size:cover;
+    background-position:center;
+    
+}
+
+div.popup-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background:transparent;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+div.popup-container div.popup{
+    background:transparent;
+    border: 2px, solid rgba(255,255,255,.5);
+    border-radius: 20px; 
+    
+    width: 350px;
+    
+    padding: 20px 25px 30px 25px;
+    border-radius: 20px;
+    backdrop-filter:blur(20px);
+    box-shadow:  0 0 30px rgba(0,0,0,.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.popup-container div.popup h2{
+    color: #162938;
+    text-align: center;
+    font-weight: 540;
+    font-size:1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+div.popup-container div.popup h2 button,div.popup-container div.admin h2 button{
+    border:none;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight: 550;
+    padding: 15px;
+    color: #162938;
+}
+
+div.popup-container div.popup input{
+    width: 100%;
+    margin-bottom: 20px;
+    color: #162938;
+    background-color:transparent;
+    border: none;
+    border-bottom:2px solid #30475e;
+    border-radius: 0;
+    padding: 5px 0;
+    font-weight: 550;
+    font-size: 14px;
+    outline:none;
+}
+
+div.popup-container div.popup button.login-btn,div.popup-container div.register button.register-btn{
+    font-weight: 450;
+    font-size: 15px;
+    font-style: 15px;
+    color:white;
+    background-color: #162938;
+    padding: 4px 10px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    align-content: center;
+}
+
+div.popup-container div.admin button.admin-btn{
+    font-weight: 450;
+    font-size: 15px;
+    font-style: 15px;
+    color:white;
+    background-color: #162938;
+    padding: 4px 10px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+div.popup-container div.register{
+    background:transparent;
+    border: 2px, solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter:blur(20px);
+    box-shadow:  0 0 30px rgba(0,0,0,.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+div.popup-container div.register h2{
+    color: #162938;
+    text-align: center;
+    font-weight: 540;
+    font-size:1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+div.popup-container div.register h2 button{
+    color: #162938;
+    font-weight: 550;
+    padding: 15px;
+    font-size:15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+div.popup-container div.register input{
+    border-bottom-color: #fa9579;
+    color: #162938;
+    text-align:center;
+}
+
+div.popup-container div.admin input{
+    border-bottom-color: #fa9579;
+    color: #162938;
+    text-align:center;
+}
+div.popup-container div.popup input{
+    border-bottom-color: #fa9579;
+    color: #162938;
+    text-align:center;
+}
+
+div.popup-container div.register button.register-btn,div.popup-container div.admin button.admin-btn{
+    border-bottom-color: #fa9579;
+}
+
+div.user{
+    color:#30475e;
+    background: transparent;
+    padding: 5px 15px;
+    border-radius:5px;
+    font-weight: 500;
+}
+
+div.user a{
+    
+    text-decoration: none;
+    color:white;
+    margin-left: 40px;
+    padding: 5px 15px;
+    border:2px solid #fff;
+    border-radius: 5px;
+    outline:none;
+    
+    transition:transform .5s;
+}
+div.input-icons input:focus~label,
+div.input-icons input:valid~label{
+    top:-5px;
+}
+.input-icons i {
+    position:absolute;
+   
+}
+ 
+.input-icons {
+    width: 100%;
+    margin-bottom: -5px;
+}
+ 
+::placeholder {
+    color: #162938;
+    opacity: 1; 
+  }
+.icon {
+    padding: 0px;
+    min-width: 20px;
+}
+ 
+.input-field {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    
+}
+
+.top-buffer{
+    margin-top: 85px;
+    align-items: center;
+    text-align: center;
+    float:left;
+    padding-right: 15px;
+        padding-left: 25px;
+        margin-right: 15px;
+        margin-left: 35px;
+}
+
+.top-buffer-updated{
+    margin-top: 85px;
+    align-items: center;
+    text-align: center;
+    float:left;
+    padding-right: 15px;
+        padding-left: 30px;
+        margin-right: 15px;
+        margin-left: 50px;
+}
+
+.piechart{
+    width:"300px";
+    height:"300px";
+    
+}
+
